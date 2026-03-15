@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.fvue233.vkbc.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BarCabinetBlockMixin",
+    "DrinkBlockItemAccessor",
+    "BarCabinetBlockEntityRenderMixin",
+    "PressingTubBlockEntityMixin",
+    "BarrelBlockEntityMixin",
+    "GrapevinePotBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
