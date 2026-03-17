@@ -35,6 +35,16 @@ repositories {
             includeGroup "dev.architectury"
         }
     }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 base {
@@ -128,11 +138,14 @@ configurations {
 }
 
 dependencies {
-    // Kaleidoscope Tavern mod
-    implementation project(":other:KaleidoscopeTavern-main")
-    
     // Vinery mod
-    compileOnly "curse.maven:vinery-667489:5487272"
+    compileOnly files("run/mods/letsdo-vinery-neoforge-1.5.3.jar")
+    
+    // Kaleidoscope Tavern mod
+    compileOnly files("run/mods/kaleidoscopetavern-1.0.0-neoforge+mc1.21.1.jar")
+    
+    // Architectury API
+    compileOnly files("run/mods/architectury-13.0.8-neoforge.jar")
     
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
