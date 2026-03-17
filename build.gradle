@@ -19,6 +19,7 @@ group = mod_group_id
 
 repositories {
     mavenCentral()
+    maven { url "https://maven.neoforged.net/releases" }
     maven {
         name = "SpongePowered"
         url = "https://repo.spongepowered.org/repository/maven-public/"
@@ -139,13 +140,13 @@ configurations {
 
 dependencies {
     // Vinery mod
-    compileOnly files("run/mods/letsdo-vinery-neoforge-1.5.3.jar")
+    implementation "curse.maven:lets-do-vinery-704465:7539914"
     
     // Kaleidoscope Tavern mod
-    compileOnly files("run/mods/kaleidoscopetavern-1.0.0-neoforge+mc1.21.1.jar")
+    implementation "curse.maven:kaleidoscope-tavern-1475175:7704373"
     
     // Architectury API
-    compileOnly files("run/mods/architectury-13.0.8-neoforge.jar")
+    implementation ("dev.architectury:architectury-neoforge:13.0.8")
     
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
